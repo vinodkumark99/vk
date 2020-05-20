@@ -1,0 +1,60 @@
+#Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+
+def divide():
+    return 5/0
+
+try:
+    divide()
+except ZeroDivisionError as ze:
+    print("Why on earth you are dividing a number by ZERO!!")
+except:
+    print("Any other exception")
+
+
+
+
+'''Implement a Python program to generate all sentences where subject is in ["Americans",
+"Indians"] and verb is in ["Play", "watch"] and the object is in ["Baseball","cricket"].
+Hint: Subject,Verb and Object should be declared in the program as shown below.
+subjects=["Americans ","Indians"]
+verbs=["play","watch"]
+objects=["Baseball","Cricket"]
+Output should come as below:
+Americans play Baseball.
+Americans play Cricket.
+Americans watch Baseball.
+Americans watch Cricket.
+Indians play Baseball.
+Indians play Cricket.
+Indians watch Baseball.
+Indians watch Cricket.'''
+
+subject=["Americans", "Indians"]
+verb=["Play", "watch"]
+obj=["Baseball","cricket"]
+
+# Use list comprehension instead of looping over each of the predicates
+sentence_list = [(sub+" "+ vb + " " + ob) for sub in subject for vb in verb for ob in obj]
+for sentence in sentence_list:
+ print (sentence)
+
+
+
+
+
+'''Write a function so that the columns of the output matrix are powers of the input vector.
+The order of the powers is determined by the increasing boolean argument. Specifically, when
+increasing is False, the i-th output column is the input vector raised element-wise to the power
+of N - i - 1.'''
+
+import numpy as np 
+  # input_array 
+arr1 = [2, 2, 2, 2, 2] 
+arr2 = [2, 3, 4, 5, 6] 
+print ("arr1         : ", arr1) 
+print ("arr1         : ", arr2) 
+  # output_array 
+out = np.power(arr1, arr2) 
+print ("\nOutput array : ", out) 
+
